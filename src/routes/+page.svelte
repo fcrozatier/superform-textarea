@@ -49,6 +49,7 @@
 			{...$constraints.bio}
 			maxlength="5"
 		/>
+    <span>{$form.bio.length}/{$constraints.bio?.maxlength}</span>
 		{#if $errors.bio}<span class="invalid">{$errors.bio}</span>{/if}
 	</div> -->
 	<div>
@@ -61,6 +62,7 @@
 			bind:value={$form.bio}
 			{...$constraints.bio}
 		/>
+		<span>{$form.bio.length}/{$constraints.bio?.maxlength}</span>
 		{#if $errors.bio}<span class="invalid">{$errors.bio}</span>{/if}
 	</div>
 
