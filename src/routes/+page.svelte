@@ -34,6 +34,23 @@
 		{#if $errors.email}<span class="invalid">{$errors.email}</span>{/if}
 	</div>
 
+	<!--
+  Add maxlength manually?
+  -> superforms not the source of truth
+  -->
+	<!-- <div>
+		<label for="bio">Bio</label>
+		<textarea
+			name="bio"
+			cols="30"
+			rows="10"
+			aria-invalid={$errors.bio ? 'true' : undefined}
+			bind:value={$form.bio}
+			{...$constraints.bio}
+			maxlength="5"
+		/>
+		{#if $errors.bio}<span class="invalid">{$errors.bio}</span>{/if}
+	</div> -->
 	<div>
 		<label for="bio">Bio</label>
 		<textarea
