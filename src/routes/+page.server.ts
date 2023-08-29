@@ -6,8 +6,8 @@ import { fail } from '@sveltejs/kit';
 
 const schema = z.object({
 	name: z.string().default('John'),
-	email: z.string().email().default('john@gmail.com')
-	// bio: z.string().max(5) // this won't work with new lines
+	email: z.string().email().default('john@gmail.com'),
+	bio: z.string().max(5) // this won't work with new lines
 	// bio: z.string().refine(
 	// 	(str) => {
 	// 		return str.length - (str.match(/\r\n/g) ?? []).length <= 5;
